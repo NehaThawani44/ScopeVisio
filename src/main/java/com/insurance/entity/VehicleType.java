@@ -14,6 +14,9 @@ public class VehicleType {
     private String typeName;
     private Double typeFactor;
 
+    public VehicleType(String car, double v) {
+    }
+
     public Long getId() {
         return id;
     }

@@ -14,6 +14,9 @@ public class Region {
     private String federalState;
     private Double regionFactor;
 
+    public Region(String california, double v) {
+    }
+
     public Long getId() {
         return id;
     }

@@ -30,7 +30,7 @@ Premium = Mileage factor * Vehicle type factor * Region factor
 2. The service calculates the insurance premium based on these inputs and stores both the input and output data in the database for future reference.
 
 ## Project Structure
-### Packagesw
+### Packages
 - **controller**: Contains REST controllers to handle HTTP requests.
     - `PremiumController`: Manages premium calculation requests.
 - **dto**: Data Transfer Objects used for incoming requests and outgoing responses.
@@ -49,7 +49,7 @@ Premium = Mileage factor * Vehicle type factor * Region factor
     - `PremiumCalculationService`: Implements the premium calculation logic using input factors.
 
 ## Database Choice
-- **H2** (in-memory database) for local development.
+- **H2** (in-memory database) for local development. Used it temporarily just for simplicity.
 - **PostgreSQL** for production due to strong data integrity, scalability, and excellent support for relational data models.
 
 ## Services
@@ -104,7 +104,7 @@ Premium = Mileage factor * Vehicle type factor * Region factor
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/NehaThawani44/ScopeVisio.git
-   cd <repository-folder>
+   cd insurance-premium
 
 2. **Build the Application**
  ```bash
@@ -118,7 +118,7 @@ Premium = Mileage factor * Vehicle type factor * Region factor
 
 4. **Run Tests**
 ```bash
-   mvn spring-boot:run
+   mvn test
 ```
 
 
