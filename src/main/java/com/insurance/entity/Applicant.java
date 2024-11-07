@@ -17,6 +17,9 @@ public class Applicant {
 
     private Double calculatedPremium; // New field to store the calculated premium
 
+    public Applicant() {
+    }
+
     // Getters and Setters
     public Long getId() {
         return id;

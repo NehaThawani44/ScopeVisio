@@ -14,6 +14,10 @@ public class VehicleType {
     private String typeName;
     private Double typeFactor;
 
+    public VehicleType() {
+
+    }
+
     public VehicleType(String car, double v) {
     }
 

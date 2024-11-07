@@ -8,6 +8,9 @@ public class Premium {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    public Premium() {
+    }
+
     private Double premiumAmount;
     private Double mileageFactor;
     private Double vehicleTypeFactor;

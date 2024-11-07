@@ -13,10 +13,17 @@ public class Region {
 
     private String federalState;
     private Double regionFactor;
+    private String regionName;
 
-    public Region(String california, double v) {
+    public Region() {
     }
 
+    public Region(String federalState, double regionFactor) {
+        this.federalState = federalState;
+        this.regionFactor = regionFactor;
+    }
+
+    // Getters and Setters
     public Long getId() {
         return id;
     }
@@ -39,6 +46,14 @@ public class Region {
 
     public void setRegionFactor(Double regionFactor) {
         this.regionFactor = regionFactor;
+    }
+
+    public String getRegionName() {
+        return regionName;
+    }
+
+    public void setRegionName(String regionName) {
+        this.regionName = regionName;
     }
 }
 
