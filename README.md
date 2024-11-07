@@ -47,6 +47,7 @@ Premium = Mileage factor * Vehicle type factor * Region factor
 
 - **controller**: Contains REST controllers to handle HTTP requests.
     - `PremiumController`: Manages premium calculation requests.
+    - `RegionController`: Provides the route of region information.
 - **dto**: Data Transfer Objects used for incoming requests and outgoing responses.
     - `PremiumRequest`: Captures input data for premium calculation.
     - `PremiumResponse`: Contains the calculated premium amount as the response.
@@ -87,12 +88,11 @@ Premium = Mileage factor * Vehicle type factor * Region factor
   loader, such as updating information or retrieving regional data.
 
 
-
 ## API Documentation
 
 ### Endpoints
 
-- **POST /api/calculate-premium**
+- **POST /api/calculate-premium** 
     - **Description**: Calculates and returns the premium based on user input.
     - POST http://localhost:8080/api/calculate-premium
     - **Request Body** (`PremiumRequest`):
@@ -178,7 +178,7 @@ Premium = Mileage factor * Vehicle type factor * Region factor
   - **Description**: Fetches regions based on the specified federal state.
   GET http: //localhost:8080/api/regions/state/Baden-Württemberg
     - **Response Body**
-      ```json
+    ```json
     [
       {
         "id": 1,
@@ -262,21 +262,7 @@ The CsvDataLoader reads each line of the CSV, extracts the relevant fields, and 
 
 For an empty database, you can use a SQL script to populate initial data for vehicle types and regions.
 
-## Example Postman Requests
 
-### Calculate Premium
-
-* Method: POST
-* URL: http://localhost:8080/api/calculate-premium
-* Body (JSON):
-
-```
-{
-  "mileage": 12000,
-  "vehicleType": "Car",
-  "federalState": "California"
-}
-```
 
 ### Future Enhancements
 
@@ -284,6 +270,10 @@ For an empty database, you can use a SQL script to populate initial data for veh
 * Third-Party Integration: Extend the API for endpoints specifically for third-party applications.
 * Enhanced Logging: Add more granular logging for debugging complex calculations.
 * Cache Region and Vehicle Type Factors: Optimize performance, especially if these factors don’t change frequently.
+* Dynamic Region Factor: Currently, a static value is assigned for regionFactor. In the future, this can be updated to pull meaningful factors from the CSV or another data source.
+* CSV Validation: Add better validation checks during CSV reading to ensure data quality, such as verifying that mandatory fields are not missing.
+* Incremental Update: Implement logic to update only changed regions when the CSV is updated, rather than reloading everything.
+
 
 ### Summary
 
