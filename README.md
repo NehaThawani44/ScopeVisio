@@ -86,19 +86,7 @@ Premium = Mileage factor * Vehicle type factor * Region factor
 - If additional logic around region data is needed, this service could manage operations specific to region data via csv
   loader, such as updating information or retrieving regional data.
 
-## How to Verify CSV Data Loading
 
-After starting the application, you can use Postman or a similar tool to make a GET request to /api/regions to verify
-that the regions have been loaded properly.
-Example Postman Request:
-Method: GET
-URL: http://localhost:8080/api/regions
-
-Get Regional Data via API
-The regional data can be accessed via the RESTful API endpoints:
-
-Endpoints to Fetch Region Data
-GET /api/regions: Fetches all regions stored in the database.
 
 ## API Documentation
 
@@ -189,24 +177,41 @@ GET /api/regions: Fetches all regions stored in the database.
 - **GET /api/regions/state/{federalState}**
   - **Description**: Fetches regions based on the specified federal state.
   GET http: //localhost:8080/api/regions/state/Baden-Württemberg
-  - **Response Body**
-    ```json
+    - **Response Body**
+      ```json
     [
-    {
-    "id": 1,
-    "federalState": "Baden-Württemberg",
-    "regionName": "Bad Krozingen",
-    "regionFactor": 1.2
-    },
-    {
-    "id": 2,
-    "federalState": "Baden-Württemberg",
-    "regionName": "Hartheim",
-    "regionFactor": 1.2
-    }
-    ]
-    ```
+      {
+        "id": 1,
+        "federalState": "Baden-Württemberg",
+        "regionName": "Bad Krozingen",
+        "regionFactor": 1.2
+      },
+      {
+      "id": 2,
+      "federalState": "Baden-Württemberg",
+      "regionName": "Hartheim",
+      "regionFactor": 1.2
+      }
+  ]```
 
+## How to Verify CSV Data Loading
+
+After starting the application, you can use Postman or a similar tool to make a GET request to /api/regions to verify
+that the regions have been loaded properly.
+Example Postman Request: GET http://localhost:8080/api/regions
+
+
+# Data Loading Logic
+The application uses a CsvDataLoader utility to read this CSV file during startup and populate the Region table in the database.
+
+# Data Mapping:
+
+* federalState: Extracted from the REGION1 column.
+* regionName: Extracted from the ORT column.
+* regionFactor: Currently set to a default value (1.2). 
+
+This can be updated in the future to dynamically reflect the data from CSV if needed.
+The CsvDataLoader reads each line of the CSV, extracts the relevant fields, and stores them in the Region entity.
 
 ## Testing and Quality Assurance
 
