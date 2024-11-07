@@ -191,7 +191,9 @@ Premium = Mileage factor * Vehicle type factor * Region factor
       "federalState": "Baden-Württemberg",
       "regionName": "Hartheim",
       "regionFactor": 1.2
-      }]```
+      }
+    ]
+    ```
 
 ## How to Verify CSV Data Loading
 
