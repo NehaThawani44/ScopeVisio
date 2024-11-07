@@ -119,8 +119,8 @@ Premium = Mileage factor * Vehicle type factor * Region factor
       ```
 
 - **GET /api/regions:**
-  - **Description**:Fetches all regions.
-     GET http://localhost:8080/api/regions
+  - **Description**:Fetches all regions. 
+  - GET http://localhost:8080/api/regions
   - **Response Body**
     ```json
     [
@@ -140,8 +140,8 @@ Premium = Mileage factor * Vehicle type factor * Region factor
     ```
     
 - **GET /api/regions/state/{federalState}**
-  - **Description**:Fetches regions based on the specified federal state.
-  GET http://localhost:8080/api/regions/state/Baden-Württemberg
+  - **Description**:Fetches regions based on the specified federal state. 
+  - GET http://localhost:8080/api/regions/state/Baden-Württemberg
   - **Response Body**
     ```json
     [
@@ -160,8 +160,8 @@ Premium = Mileage factor * Vehicle type factor * Region factor
     ]
     ```
 - **GET /api/regions/name/{regionName}:**
-  - **Description**:Fetches regions based on the specified region name.
-  GET http://localhost:8080/api/regions/name/Bad Krozingen
+  - **Description**:Fetches regions based on the specified region name. 
+  - GET http://localhost:8080/api/regions/name/Bad Krozingen
   - **Response Body**
     ```json
     [
@@ -175,8 +175,8 @@ Premium = Mileage factor * Vehicle type factor * Region factor
     ```
     
 - **GET /api/regions/state/{federalState}**
-  - **Description**: Fetches regions based on the specified federal state.
-  GET http: //localhost:8080/api/regions/state/Baden-Württemberg
+  - **Description**: Fetches regions based on the specified federal state. 
+  - GET http://localhost:8080/api/regions/state/Baden-Württemberg
     - **Response Body**
     ```json
     [
@@ -191,8 +191,7 @@ Premium = Mileage factor * Vehicle type factor * Region factor
       "federalState": "Baden-Württemberg",
       "regionName": "Hartheim",
       "regionFactor": 1.2
-      }
-  ]```
+      }]```
 
 ## How to Verify CSV Data Loading
 
