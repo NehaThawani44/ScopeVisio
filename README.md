@@ -65,7 +65,7 @@ Premium = Mileage factor * Vehicle type factor * Region factor
 
 ## Database Choice
 
-- **H2** (in-memory database) for local development. Used it temporarily just for simplicity.
+
 - **PostgreSQL** for production due to strong data integrity, scalability, and excellent support for relational data
   models.
 
@@ -218,7 +218,7 @@ The CsvDataLoader reads each line of the CSV, extracts the relevant fields, and 
 
 - **Testing Framework**: JUnit and Mockito
 - **Unit Tests**: Each service and controller is tested in isolation.
-- **Integration Tests**: Test the full application workflow, including database interaction with H2.
+- **Integration Tests**: Test the full application workflow, including database interaction with Database.
 - **Mocking**: Mocked objects are used for dependencies, particularly in service-layer tests, using Mockito.
 - **Test Coverage**: Ensures all business logic is covered, including valid/invalid inputs and edge cases.
 
