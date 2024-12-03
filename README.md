@@ -1,4 +1,4 @@
-# Insurance Premium Calculation Service
+# Car Insurance Premium Calculation Service
 
 The application uses a CSV file (postcodes.csv) to extract regional information such as federal state and region name.
 This data is used to determine the region factor for premium calculations.
